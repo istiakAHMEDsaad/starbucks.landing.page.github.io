@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Dynamic Website</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<section>
+    <div class="circle"></div>
+    <header>
+        <a href="#"><img alt="this is starbucks logo" class="logo" src="logo.png"/></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <div class="text-box">
+            <h2>It's not just Coffee<br>It's <span>StarBucks</span></h2>
+
+            <p>Starbucks Corporation is an American multinational chain of coffeehouses and roastery reserves
+                headquartered in Seattle, Washington. It is the world's largest coffeehouse chain. As of November 2021,
+                the company had 33,833 stores in 80 countries, 15,444 of which were located in the United States. <a
+                        href="https://en.wikipedia.org/wiki/Starbucks">Wikipedia</a></p>
+            <div class="learn-more"><a href="#">Learn More</a></div>
+        </div>
+        <div class="copy">
+            <p>This website only for entertainment purposes!</p>
+        </div>
+        <div class="img-box">
+            <img class="starbucks" src="img1.png" alt="starbucks image">
+        </div>
+    </div>
+    <ul class="thumbnail">
+        <li><img src="thumb1.png" onclick="Img_Slider('img1.png');  Change_Circle_Color('#017143')" alt="starbucks1 png"></li>
+        <li><img src="thumb2.png" onclick="Img_Slider('img2.png');  Change_Circle_Color('#eb7495')" alt="starbucks2 png"></li>
+        <li><img src="thumb3.png" onclick="Img_Slider('img3.png');  Change_Circle_Color('#d752b1')" alt="starbucks3 png"></li>
+    </ul>
+    <ul class="social">
+        <li><a href="#"><img alt="facebook logo" src="facebook.png"></a></li>
+        <li><a href="#"><img alt="twitter logo" src="twitter.png"></a></li>
+        <li><a href="#"><img alt="instagram logo" src="instagram.png"></a></li>
+    </ul>
+</section>
+
+<script type="text/javascript">
+    function Img_Slider(anything){
+       document.querySelector('.starbucks').src = anything;
+    }
+
+    function Change_Circle_Color(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+</script>
+
+</body>
+</html>
